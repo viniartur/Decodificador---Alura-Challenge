@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de texto</title>
+
+    <!-- Conexão com Font Awesome -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container"></div>
+            <h1 class="header__titulo">
+             <img src="default_transparent_1000x1000.png" alt="Logo" class="logo">
+         </h1>
+            <!-- para mostrar os avisos precisa adicionar a classe mostrar -->
+            <p class="header__notificacoes" id="notificacoes"></p>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="main__principal">
+            <form class="main__formulario">
+                <fieldset class="main__entrada">
+                    <textarea name="texto" id="entrada-texto" cols="30" rows="10" placeholder="Digite seu texto aqui"
+                        class="main__entrada__texto" required></textarea>
+                </fieldset>
+
+                <fieldset class="main__informacoes">
+                    <p class="main__informacoes__texto"> Apenas letras minúsculas e sem acento.</p>
+                    <!-- para mostrar os avisos precisa adicionar a classe mostrar -->
+                    <!-- <p class="main__informacoes__avisos" id="informacoes-aviso"></p> -->
+                </fieldset>
+
+                <fieldset class="main__botoes">
+                    <input type="button" value="Criptografar" class="btn main__btn__principal" id="btn-criptografar">
+                    <input type="button" value="Descriptografar" class="btn main__btn__segundario"
+                        id="btn-descriptografar">
+                </fieldset>
+            </form>
+        </section>
+
+        <aside class="main__lateral">
+            <section class="main__resposta">
+                <!-- Para esconder alguma das divs basta adicionar a classe ocultar -->
+                <div class="main__resposta__padrao" id="resposta-padrao">
+                    <p class="main__resposta__padrao__titulo">Nenhuma mensagem encontrada</p>
+                    <p class="main__resposta__padrao__texto">Digite um texto que você deseja criptografar ou
+                        descriptografar</p>
+                </div>
+                <div id="resposta-resultado" class="main__resposta__resultado ocultar">
+                    <p id="resposta-texto" class="main__resposta__texto"></p>
+                    <button id="btn-copiar" class="btn main__btn__lateral">Copiar</button>
+                </div>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">  Criado por <a href="https://github.com/viniartur"> Vinicius Vieira (GitHub)</a> - 2024 </p>
+    </footer>
+
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
